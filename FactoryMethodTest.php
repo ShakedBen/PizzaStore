@@ -8,25 +8,25 @@ class FactoryMethodTest extends TestCase
 {
     public function testCheesePizza()
     {
-        $store = new PizzaStore();
+        $nyStore = new NYPizzaStore();
 
-        $store->orderPizza("cheese");
-        $this->assertEquals("NY Style Sauce and Cheese Pizza", $store->getFinishedPizzaName());
+        $pizza = $nyStore->orderPizza("cheese");
+        $this->assertEquals("NY Style Sauce and Cheese Pizza", $pizza->getName());
     }
 
     public function testVeggiePizza()
     {
-        $store = new PizzaStore();
+        $nyStore = new NYPizzaStore();
 
-        $pizza = $store->orderPizza("veggie");
-        $this->assertEquals("NY Style Veggie Pizza", $store->getFinishedPizzaName());
+        $pizza = $nyStore->orderPizza("veggie");
+        $this->assertEquals("NY Style Veggie Pizza", $pizza->getName());
     }
 
     public function testTeriyakiPizza()
     {
-        $store = new PizzaStore();
+        $nyStore = new NYPizzaStore();
 
-        $pizza = $store->orderPizza("teriyaki");
-        $this->assertEquals("It's not on the menu...", $store->getFinishedPizzaName());
+        $pizza = $nyStore->orderPizza("teriyaki");
+        $this->assertEquals("It's not on the menu...", $pizza);
     }
 }
