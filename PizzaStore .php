@@ -5,6 +5,11 @@ class PizzaStore
     private $name;
     private $dough;
     private $sauce;
+	private $sauce1;
+	private $sauce2;
+	private $sauce3;
+	private $sauce4;
+	private $sauce5;
     private $toppings = [];
 
     public function __construct(){}
@@ -16,6 +21,11 @@ class PizzaStore
             $this->name = "NY Style Sauce and Cheese Pizza";
             $this->dough = "Thin Crust Dough";
             $this->sauce = "Marinara Sauce";
+			$this->sauce = "Marinara Sauce1";
+			$this->sauce = "Marinara Sauce2";
+		    $this->sauce = "Marinara Sauce3";
+ 	   	    $this->sauce = "Marinara Sauce4";
+			$this->sauce = "Marinara Sauce5";
             $this->toppings[] = "Grated Reggiano Cheese";
 
             // Preparing to make pizza
